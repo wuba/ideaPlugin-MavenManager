@@ -2,6 +2,7 @@
     <id>zdc.ideaPlugin.MavenManager</id>
     <name>MavenManager</name>
     <vendor email="zhoudechuan@yeah.net" url="https://github.com/zhoudechuan/ideaPlugin-MavenManager">Dechuan Zhou</vendor>
+	<idea-version since-build="163.15529.8"/>
 
     <description><![CDATA[
         Manage dependencies of maven project to resolve jar conflicts.
