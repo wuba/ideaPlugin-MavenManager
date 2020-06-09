@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.10'
+}
+
+group 'zdc.ideaPlugin'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+
+intellij {
+    version '2018.2'
+    pluginName 'MavenManager'
+    updateSinceUntilBuild false
+    plugins 'maven'
+}
+
+//patchPluginXml {
+//    changeNotes """
+//      1.0.0 Manage jar of conflict.
+//      """
+//}
