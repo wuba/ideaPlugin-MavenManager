@@ -1,8 +1,9 @@
 <idea-plugin>
     <id>zdc.ideaPlugin.MavenManager</id>
     <name>MavenManager</name>
+    <version>1.0.1</version>
     <vendor email="zhoudechuan@yeah.net" url="https://github.com/zhoudechuan/ideaPlugin-MavenManager">Dechuan Zhou</vendor>
-	<idea-version since-build="163.15529.8"/>
+    <idea-version since-build="163.15529.8"/>
 
     <description><![CDATA[
         Manage dependencies of maven project to resolve jar conflicts.
@@ -11,6 +12,7 @@
             Pitch on pom.xml -> Right click -> MavenManager.<br>
     ]]></description>
 
+    <depends>com.intellij.modules.idea</depends>
     <depends>org.jetbrains.idea.maven</depends>
 
     <actions>
