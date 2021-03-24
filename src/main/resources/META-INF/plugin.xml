@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>zdc.ideaPlugin.MavenManager</id>
     <name>MavenManager</name>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <vendor email="zhoudechuan@yeah.net" url="https://github.com/zhoudechuan/ideaPlugin-MavenManager">Dechuan Zhou</vendor>
     <idea-version since-build="163.15529.8"/>
 
@@ -11,6 +11,11 @@
         Usage:<br>
             Pitch on pom.xml -> Right click -> MavenManager.<br>
     ]]></description>
+
+    <change-notes><![CDATA[
+        1.1.0   Fix bug of NullPointerException when jar version is not number.
+        1.0.1   Initial plugin.
+    ]]></change-notes>
 
     <depends>com.intellij.modules.idea</depends>
     <depends>org.jetbrains.idea.maven</depends>
