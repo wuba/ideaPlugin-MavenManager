@@ -24,6 +24,7 @@ import org.jetbrains.idea.maven.project.MavenProject;
 import org.jetbrains.idea.maven.project.MavenProjectsManager;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * Add jar of conflict into dependencyManagement.
@@ -215,24 +216,30 @@ public class ManagerJarAction extends AnAction {
         String[] version2Array = version2.split("[._]");
         int index = 0;
         int minLength = Math.min(version1.length(), version2.length());
-        long diff = 0;
-        while (index < minLength &&
-                (diff = Long.parseLong(version1Array[index]) - Long.parseLong(version2Array[index])) == 0) {
-            index++;
-        }
-        if (diff != 0) {
-            return diff > 0 ? 1 : -1;
-        }
-        for (int i = index; i < version1Array.length; i++) {
-            if (Long.parseLong(version1Array[index]) > 0) {
-                return 1;
+        while (index < minLength) {
+            if (isNumber(version1Array[index]) && isNumber(version2Array[index])) {
+                int result = Integer.parseInt(version1Array[index]) - Integer.parseInt(version2Array[index]);
+                if (result == 0) {
+                    index++;
+                    continue;
+                }
+                return result;
             }
-        }
-        for (int i = index; i < version2Array.length; i++) {
-            if (Long.parseLong(version2Array[index]) > 0) {
-                return -1;
+            int result = version1Array[index].compareToIgnoreCase(version2Array[index]);
+            if (result == 0) {
+                index++;
+                continue;
             }
+            return result;
         }
-        return 0;
+        if (version1Array.length == version2Array.length) {
+            return 0;
+        }
+        return version1Array.length > version2Array.length ? 1 : -1;
+    }
+
+    public static boolean isNumber(String str){
+        Pattern pattern = Pattern.compile("[0-9]*");
+        return pattern.matcher(str).matches();
     }
 }
