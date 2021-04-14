@@ -1,4 +1,4 @@
-package zdc.ideaPlugin.mavenManager.action;
+package com.bj58.ideaPlugin.mavenManager.action;
 
 import com.intellij.ide.IdeView;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -29,7 +29,6 @@ import java.util.regex.Pattern;
 /**
  * Add jar of conflict into dependencyManagement.
  *
- * @author zhoudechuan
  */
 public class ManagerJarAction extends AnAction {
 
@@ -81,7 +80,7 @@ public class ManagerJarAction extends AnAction {
                             }
                         });
                     });
-                }), "MavenManager", "zdc.ideaPlugin");
+                }), "MavenManager", "com.bj58.ideaPlugin");
     }
 
     /**
