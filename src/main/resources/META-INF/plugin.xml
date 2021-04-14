@@ -1,11 +1,12 @@
 <idea-plugin>
-    <id>zdc.ideaPlugin.MavenManager</id>
+    <id>com.bj58.ideaPlugin.MavenManager</id>
     <name>MavenManager</name>
     <version>1.1.1</version>
-    <vendor email="zhoudechuan@yeah.net" url="https://github.com/zhoudechuan/ideaPlugin-MavenManager">Dechuan Zhou</vendor>
+    <vendor url="https://plugins.jetbrains.com/plugin/14478-mavenmanager">bj58</vendor>
     <idea-version since-build="181.5684.4"/>
 
     <description><![CDATA[
+        MavenManager is an IDEA plugin developed by 58 Project Efficiency team.
         Manage dependencies of maven project to resolve jar conflicts.
         <br><br>
         Usage:<br>
@@ -22,7 +23,7 @@
 
     <actions>
         <action id="ManagerJar"
-                class="zdc.ideaPlugin.mavenManager.action.ManagerJarAction"
+                class="com.bj58.ideaPlugin.mavenManager.action.ManagerJarAction"
                 text="MavenManager"
                 description="Manage jar."
                 icon="/images/mavenPlugin.svg">
