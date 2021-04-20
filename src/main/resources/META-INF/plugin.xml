@@ -2,7 +2,7 @@
     <id>com.bj58.ideaPlugin</id>
     <name>MavenManager</name>
     <version>1.1.1</version>
-    <vendor url="https://plugins.jetbrains.com/plugin/14478-mavenmanager">bj58</vendor>
+    <vendor url="https://github.com/wuba/ideaPlugin-MavenManager">bj58</vendor>
     <idea-version since-build="181.5684.4"/>
 
     <description><![CDATA[
