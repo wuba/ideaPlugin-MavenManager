@@ -6,7 +6,7 @@
     <idea-version since-build="181.5684.4"/>
 
     <description><![CDATA[
-        MavenManager is a IDEA plugin developed by the 58 Project Efficiency team.
+        MavenManager is an IntelliJ-based IDE plugin developed by the 58 Project Efficiency team.
         Manage dependencies of maven project to resolve jar conflicts.
         <br><br>
         Usage:<br>
